@@ -74,3 +74,34 @@ available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.ht
 
 For answers to common questions about this code of conduct, see
 https://www.contributor-covenant.org/faq
+
+
+<div class="container">
+        <div class="col-md-9">
+          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
+            <div class="caption">
+              <h2>Hi, I'm <span class="teal">Carl Ek.</span></h2>
+              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40">Versa</span><span class="typed-cursor">|</span></h5>
+              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
+              <h5>describe yourself here.</h5>
+            </div>
+            <div class="social">
+              <a href="http://linkedin.com/in/carlek" target="_blank">
+                <button class="icon-btn linkedin">
+                  <i class="fa fa-linkedin"></i>
+                </button>
+              </a>
+              <a href="https://github.com/carlek/" target="_blank">
+                <button class="icon-btn github">
+                  <i class="fa fa-github"></i>
+                </button>
+              </a>
+
+            </div>
+            <div class="buttons">
+              <a href="#about" class="readme">Read More</a>
+              <a href="#contact" class="contactme">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
