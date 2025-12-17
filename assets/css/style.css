@@ -715,6 +715,7 @@ small {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 24px;
+  width: 100%;
 }
 
 /* Make each card behave consistently */
