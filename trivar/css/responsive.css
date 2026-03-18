@@ -112,4 +112,15 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  /* Testimonial carousel */
+  .t-carousel-wrap {
+    padding: 0 2.25rem;
+  }
+
+  .t-arrow {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
 }

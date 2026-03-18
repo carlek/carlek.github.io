@@ -130,11 +130,11 @@
       <span class="label">Testimonials</span>
       <h3 style="margin-bottom:var(--space-xl);">What Musicians Are Saying</h3>
     </div>
-    <div style="position:relative;padding:0 3.5rem;">
+    <div class="t-carousel-wrap">
       <!-- Arrows -->
-      <button id="tprev" aria-label="Previous testimonial" style="position:absolute;left:0;top:50%;transform:translateY(-50%);z-index:10;background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-accent);width:2.5rem;height:2.5rem;font-size:1.25rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
-      <button id="tnext" aria-label="Next testimonial" style="position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:10;background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-accent);width:2.5rem;height:2.5rem;font-size:1.25rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
-      <!-- Viewport: this clips the track -->
+      <button id="tprev" aria-label="Previous testimonial" class="t-arrow t-arrow--prev">&#8592;</button>
+      <button id="tnext" aria-label="Next testimonial" class="t-arrow t-arrow--next">&#8594;</button>
+      <!-- Viewport: clips the track -->
       <div id="tviewport" style="overflow:hidden;">
       <!-- Track: slides via transform -->
       <div id="ttrack" style="display:flex;gap:1rem;transition:transform 0.35s ease;">
@@ -208,8 +208,9 @@
       let idx        = 0;
 
       function setCardWidths() {
-        const vw = viewport.offsetWidth;
-        const perCard = Math.min(320, vw - GAP);
+        // Read viewport width; fall back to window width minus arrow space if 0
+        const vw = viewport.offsetWidth || (window.innerWidth - 80);
+        const perCard = Math.max(180, Math.min(320, vw - GAP));
         cards.forEach(c => { c.style.flex = `0 0 ${perCard}px`; });
       }
 
@@ -222,7 +223,18 @@
 
       function move(dir) { goTo(idx + dir); }
 
-      setCardWidths();
+      function init() {
+        setCardWidths();
+        goTo(0);
+      }
+
+      // Run after layout is guaranteed
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        // Already parsed — defer one frame so layout is flushed
+        requestAnimationFrame(init);
+      }
 
       window.addEventListener('resize', () => {
         track.style.transition = 'none';

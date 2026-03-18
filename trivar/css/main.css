@@ -377,6 +377,32 @@ p { max-width: 68ch; }
   white-space: nowrap;
 }
 
+/* ── Testimonial carousel ─────────────────────────────────── */
+.t-carousel-wrap {
+  position: relative;
+  padding: 0 3rem;
+}
+
+.t-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-arrow--prev { left: 0; }
+.t-arrow--next { right: 0; }
+
 .cert-badge {
   font-family: var(--font-display);
   font-size: 0.75rem;
