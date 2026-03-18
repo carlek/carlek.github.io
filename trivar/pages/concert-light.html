@@ -103,26 +103,138 @@
         <div style="border:1px solid var(--color-border);overflow:hidden;">
           <img src="https://trivar.com/concertlight_2_files/image002.jpg"
                alt="ConcertLight II product view"
-               style="width:100%;height:220px;object-fit:cover;display:block;" />
+               class="gallery-img" style="width:100%;height:220px;object-fit:cover;display:block;cursor:zoom-in;" />
         </div>
         <div style="border:1px solid var(--color-border);overflow:hidden;">
           <img src="https://trivar.com/concertlight_2_files/image004.jpg"
                alt="ConcertLight II on music stand"
-               style="width:100%;height:220px;object-fit:cover;display:block;" />
+               class="gallery-img" style="width:100%;height:220px;object-fit:cover;display:block;cursor:zoom-in;" />
         </div>
         <div style="border:1px solid var(--color-border);overflow:hidden;">
           <img src="https://trivar.com/concertlight_2_files/image006.jpg"
                alt="ConcertLight II carry case"
-               style="width:100%;height:220px;object-fit:cover;display:block;" />
+               class="gallery-img" style="width:100%;height:220px;object-fit:cover;display:block;cursor:zoom-in;" />
         </div>
         <div style="border:1px solid var(--color-border);overflow:hidden;">
           <img src="https://trivar.com/concertlight_2_files/image008.gif"
                alt="ConcertLight II detail"
-               style="width:100%;height:220px;object-fit:cover;display:block;" />
+               class="gallery-img" style="width:100%;height:220px;object-fit:cover;display:block;cursor:zoom-in;" />
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Testimonials -->
+  <section class="section--tight" style="border-top:1px solid var(--color-border);">
+    <div class="container">
+      <span class="label">Testimonials</span>
+      <h3 style="margin-bottom:var(--space-xl);">What Musicians Are Saying</h3>
+    </div>
+    <div style="position:relative;padding:0 3.5rem;">
+      <!-- Arrows -->
+      <button id="tprev" aria-label="Previous testimonial" style="position:absolute;left:0;top:50%;transform:translateY(-50%);z-index:10;background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-accent);width:2.5rem;height:2.5rem;font-size:1.25rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8592;</button>
+      <button id="tnext" aria-label="Next testimonial" style="position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:10;background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-accent);width:2.5rem;height:2.5rem;font-size:1.25rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8594;</button>
+      <!-- Viewport: this clips the track -->
+      <div id="tviewport" style="overflow:hidden;">
+      <!-- Track: slides via transform -->
+      <div id="ttrack" style="display:flex;gap:1rem;transition:transform 0.35s ease;">
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"The lamp works great - nice to know I'll always be able to see the music."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Larry Combs</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Principal Clarinet, Chicago Symphony</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"This light is fabulous. I have been a gigger for 30 years and tried many portable lights. This is the only one that ever truly worked."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">J. Pinkerton</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Harp — Virginia</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"The best light for pit use I have ever seen; it was pure pleasure to really see the music. This is a best in class product – nothing else comes close."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">R. Miller</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Horn — Washington</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"It's nice to avoid a power cord, but the main advantage of ConcertLight is its superior light quality."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">F. Nordberg</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Guitar — Norway</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"The lights are unobtrusive and elegant, and with no electric cords, we don't have to concern ourselves with tripping on and off stage."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Norman Fischer</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Fischer Duo</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"I finally got to try your wonderful light out in a dark orchestra pit, and let me tell you, it is fabulous!"</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Chris Zacher</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Horn — Long Island, NY</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"The lights are awesome."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Heritage Band</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Langley Air Force Base, VA</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"I really use my ConcertLight a great deal. My eyes do not get tired, and the light is truly cool!"</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Joyce Shepard</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Violin — San Diego, CA</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"With LampCraft's ConcertLights, there are no shadows; the light is soft and eliminates any glare."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Dick Robins</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Director, Monterey Community Band, CA</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"Your ConcertLight is great, congratulations! I'm using it on many jobs and recommending it to fellow musicians."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Don Norton</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Violin — Georgia</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"My two ConcertLights are an invaluable addition to both my teaching studio and my touring activities."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Stephen Shipps</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Prof. of Violin, University of Michigan</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"The ConcertLight is a perfect companion and has become a permanent part of my kit."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Elizabeth Panzer</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Freelance Harpist — New York</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"Without question, the unit really is terrific. I thank you for a great product."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Jose Silva</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Piano — Bedford, MA</div></div>
+        </div>
+        <div class="t-card" style="min-width:0;border:1px solid var(--color-border);background:var(--color-surface);padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;line-height:1.6;flex:1;">"Our musicians love the illumination and our clients are impressed with the professional look."</p>
+          <div><div style="color:var(--color-text);font-size:0.85rem;font-weight:600;">Bridgette Khoo</div><div style="color:var(--color-text-muted);font-size:0.75rem;font-family:var(--font-mono);">Music Director, Celebrated String Quartet — Washington, D.C.</div></div>
+        </div>
+      </div>
+      </div><!-- /tviewport -->
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const viewport = document.getElementById('tviewport');
+      const track    = document.getElementById('ttrack');
+      const cards    = Array.from(track.querySelectorAll('.t-card'));
+      const GAP      = 16;
+      let idx        = 0;
+
+      function setCardWidths() {
+        const vw = viewport.offsetWidth;
+        const perCard = Math.min(320, vw - GAP);
+        cards.forEach(c => { c.style.flex = `0 0 ${perCard}px`; });
+      }
+
+      function cardW() { return cards[0].offsetWidth + GAP; }
+
+      function goTo(i) {
+        idx = ((i % cards.length) + cards.length) % cards.length;
+        track.style.transform = `translateX(-${idx * cardW()}px)`;
+      }
+
+      function move(dir) { goTo(idx + dir); }
+
+      setCardWidths();
+
+      window.addEventListener('resize', () => {
+        track.style.transition = 'none';
+        setCardWidths();
+        goTo(idx);
+        requestAnimationFrame(() => { track.style.transition = 'transform 0.35s ease'; });
+      });
+
+      document.getElementById('tprev').addEventListener('click', () => move(-1));
+      document.getElementById('tnext').addEventListener('click', () => move(1));
+    })();
+  </script>
 
   <!-- Packages -->
   <section class="section--tight" style="border-top:1px solid var(--color-border);">
@@ -234,5 +346,34 @@
   </footer>
 
   <script src="../js/nav.js"></script>
+
+  <!-- Lightbox -->
+  <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:90vh;object-fit:contain;box-shadow:0 0 60px rgba(0,0,0,0.6);display:block;" />
+    <button id="lightbox-close" aria-label="Close" style="position:fixed;top:1.25rem;right:1.5rem;background:none;border:none;color:#fff;font-size:2rem;line-height:1;cursor:pointer;opacity:0.8;">&times;</button>
+  </div>
+
+  <script>
+    const lightbox    = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery-img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
 </body>
 </html>
