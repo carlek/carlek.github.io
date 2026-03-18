@@ -13,11 +13,11 @@
   --color-surface:    #161b22;
   --color-surface-2:  #1f2937;
   --color-border:     #2a3441;
-  --color-accent:     #0ff50b;        /* amber — industrial warning stripe */
-  --color-accent-dim: #92650a;
-  --color-text:       #e2e8f0;
-  --color-text-muted: #b7c4d5;
-  --color-text-faint: #acb0b4;
+  --color-accent:     #0bf55d;        /* st paddy's theme */
+  --color-accent-dim: #079909;
+  --color-text:       #e9f2eb;
+  --color-text-muted: #b8e6bf;
+  --color-text-faint: #8fa7be;
   --color-white:      #ffffff;
 
   /* Typography */
