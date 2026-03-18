@@ -38,9 +38,10 @@
   /* Nav */
   .nav__links {
     display: none;
-    position: absolute;
+    position: fixed;
     top: var(--nav-height);
     left: 0; right: 0;
+    z-index: 999;
     background: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
     flex-direction: column;

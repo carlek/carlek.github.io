@@ -3,18 +3,35 @@ const hamburger = document.querySelector('.nav__hamburger');
 const navLinks  = document.querySelector('.nav__links');
 
 if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('is-open');
-    const isOpen = navLinks.classList.contains('is-open');
-    hamburger.setAttribute('aria-expanded', isOpen);
+  function openMenu() {
+    navLinks.classList.add('is-open');
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', true);
+  }
+
+  function closeMenu() {
+    navLinks.classList.remove('is-open');
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', false);
+  }
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.contains('is-open') ? closeMenu() : openMenu();
   });
 
   // Close on link click
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('is-open');
-      hamburger.setAttribute('aria-expanded', false);
-    });
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close when tapping outside the menu
+  document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('is-open') &&
+        !navLinks.contains(e.target) &&
+        !hamburger.contains(e.target)) {
+      closeMenu();
+    }
   });
 }
 
