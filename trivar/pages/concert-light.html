@@ -131,9 +131,6 @@
       <h3 style="margin-bottom:var(--space-xl);">What Musicians Are Saying</h3>
     </div>
     <div class="t-carousel-wrap">
-      <!-- Arrows -->
-      <button id="tprev" aria-label="Previous testimonial" class="t-arrow t-arrow--prev">&#8592;</button>
-      <button id="tnext" aria-label="Next testimonial" class="t-arrow t-arrow--next">&#8594;</button>
       <!-- Viewport: clips the track -->
       <div id="tviewport" style="overflow:hidden;">
       <!-- Track: slides via transform -->
@@ -196,6 +193,11 @@
         </div>
       </div>
       </div><!-- /tviewport -->
+      <!-- Controls: centered below on mobile, overlaid on sides on desktop -->
+      <div class="t-controls">
+        <button id="tprev" aria-label="Previous testimonial" class="t-arrow t-arrow--prev">&#8592;</button>
+        <button id="tnext" aria-label="Next testimonial" class="t-arrow t-arrow--next">&#8594;</button>
+      </div>
     </div>
   </section>
 
@@ -245,6 +247,14 @@
 
       document.getElementById('tprev').addEventListener('click', () => move(-1));
       document.getElementById('tnext').addEventListener('click', () => move(1));
+
+      // Touch swipe
+      let touchX = 0;
+      viewport.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      viewport.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 40) move(dx < 0 ? 1 : -1);
+      }, { passive: true });
     })();
   </script>
 

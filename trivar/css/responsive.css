@@ -6,6 +6,22 @@
 /* ── Tablet (≥ 768px) ─────────────────────────────────────── */
 @media (min-width: 768px) {
   .nav__hamburger { display: none; }
+
+  /* Testimonial carousel: overlay arrows on sides */
+  .t-carousel-wrap { padding: 0 3rem; }
+
+  .t-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    justify-content: space-between;
+    margin-top: 0;
+    pointer-events: none;
+  }
+
+  .t-arrow { pointer-events: all; }
 }
 
 /* ── Desktop (≥ 1024px) ───────────────────────────────────── */
@@ -113,14 +129,4 @@
     align-items: flex-start;
   }
 
-  /* Testimonial carousel */
-  .t-carousel-wrap {
-    padding: 0 2.25rem;
-  }
-
-  .t-arrow {
-    width: 2rem;
-    height: 2rem;
-    font-size: 1rem;
-  }
 }
