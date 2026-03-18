@@ -13,11 +13,11 @@
   --color-surface:    #161b22;
   --color-surface-2:  #1f2937;
   --color-border:     #2a3441;
-  --color-accent:     #f59e0b;        /* amber — industrial warning stripe */
+  --color-accent:     #0ff50b;        /* amber — industrial warning stripe */
   --color-accent-dim: #92650a;
   --color-text:       #e2e8f0;
-  --color-text-muted: #8b9ab0;
-  --color-text-faint: #4a5568;
+  --color-text-muted: #b7c4d5;
+  --color-text-faint: #acb0b4;
   --color-white:      #ffffff;
 
   /* Typography */
