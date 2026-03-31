@@ -48,3 +48,17 @@ The app runs at `http://localhost:5173` by default.
 npm run build
 npm run preview
 ```
+
+## Deployment
+
+The app is deployed to GitHub Pages at [carlek.github.io/how-did-it-go](https://carlek.github.io/how-did-it-go/).
+
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) handles deployment automatically. On every push to `main`:
+
+1. Installs dependencies and builds the React app with Vite
+2. Assembles the full site, replacing the `how-did-it-go/` directory with the built `dist/` output
+3. Deploys to GitHub Pages using the official `actions/deploy-pages` action
+
+No manual build step is needed -- just push source changes and the workflow takes care of the rest.
+
+**Note:** In the repo's **Settings > Pages**, the source must be set to **GitHub Actions** (not "Deploy from a branch").
