@@ -162,7 +162,7 @@ export default function InterviewQuiz() {
           <p style={{ color: "#94a3b8", marginTop: "0.5rem", fontSize: "0.9rem" }}>
             {submitted
               ? "Here's how your interview stacked up. Use this to decide your next move."
-              : "Answer questions to get an idea on how it went. Don't worry, nothing here is recorded, tracked, or shared!"}
+              : "Answer 8 questions to get an idea on how it went. Don't worry, nothing here is recorded, tracked, or shared!"}
           </p>
         </div>
 
